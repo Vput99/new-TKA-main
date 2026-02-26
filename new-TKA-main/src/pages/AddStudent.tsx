@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { School, UserPlus, ArrowLeft, Loader2, XCircle } from 'lucide-react';
+import { School, UserPlus, ArrowLeft, Loader2, XCircle, LayoutDashboard, FileText, Users, BarChart, Settings, LogOut } from 'lucide-react';
 import { motion } from 'motion/react';
 import { dbService, Profile } from '../services/db';
 
@@ -60,7 +60,7 @@ export default function AddStudent({ user, onLogout }: AddStudentProps) {
       {/* Sidebar (simplified for this component) */}
       <aside className="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex-col hidden lg:flex h-screen sticky top-0">
         <div className="p-6 flex items-center gap-3">
-          <button 
+          <button
             onClick={() => navigate('/teacher/manajemen-siswa')}
             className="p-2 -ml-2 text-slate-400 hover:text-blue-600 transition-colors lg:hidden"
           >
@@ -106,7 +106,7 @@ export default function AddStudent({ user, onLogout }: AddStudentProps) {
               <p className="text-xs text-slate-500">Guru Matematika</p>
             </div>
           </div>
-          <button 
+          <button
             onClick={() => {
               onLogout();
               navigate('/teacher/login');
@@ -134,7 +134,7 @@ export default function AddStudent({ user, onLogout }: AddStudentProps) {
         <div className="flex-1 overflow-y-auto bg-slate-50 dark:bg-slate-950 p-4 md:p-8">
           <div className="max-w-3xl mx-auto flex flex-col gap-6">
             <div className="flex items-center gap-4">
-              <button 
+              <button
                 onClick={() => navigate('/teacher/manajemen-siswa')}
                 className="text-slate-400 hover:text-blue-600 transition-colors"
               >
@@ -209,7 +209,7 @@ export default function AddStudent({ user, onLogout }: AddStudentProps) {
                   ))}
                 </select>
               </div>
-              <button 
+              <button
                 type="submit"
                 className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm font-bold shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={isLoading}
