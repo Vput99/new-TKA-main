@@ -10,7 +10,7 @@ export default function LandingPage() {
       <header className="w-full border-b border-slate-200 bg-white dark:bg-slate-900 dark:border-slate-800 px-6 py-4 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3 text-slate-900 dark:text-white">
-            <button 
+            <button
               onClick={() => window.history.back()}
               className="p-2 -ml-2 text-slate-400 hover:text-blue-600 transition-colors sm:hidden"
               title="Kembali"
@@ -22,13 +22,13 @@ export default function LandingPage() {
             </div>
             <h2 className="text-xl font-bold tracking-tight">TKA Simulation Portal</h2>
           </div>
-            <button 
-              onClick={() => navigate('/teacher/login')}
-              className="group flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-600 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-blue-600"
-            >
-              <UserRoundSearch className="w-5 h-5" />
-              <span className="hidden sm:inline">Login Guru / Admin</span>
-            </button>
+          <button
+            onClick={() => navigate('/teacher/login')}
+            className="group flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 text-sm font-bold text-slate-700 transition-all hover:bg-blue-600 hover:text-white dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-blue-600 dark:hover:text-white"
+          >
+            <UserRoundSearch className="w-5 h-5" />
+            <span className="hidden sm:inline">Login Guru / Admin</span>
+          </button>
         </div>
       </header>
 
@@ -38,7 +38,7 @@ export default function LandingPage() {
             <div className="layout-content-container flex w-full max-w-7xl flex-col px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col gap-8 py-6 lg:flex-row lg:items-center lg:gap-16 lg:py-12">
                 {/* Illustration Side */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   className="w-full lg:w-1/2"
@@ -47,9 +47,9 @@ export default function LandingPage() {
                     <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-blue-600/10 blur-3xl"></div>
                     <div className="absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-blue-400/10 blur-3xl"></div>
                     <div className="relative z-10 aspect-[4/3] w-full bg-cover bg-center rounded-xl shadow-sm overflow-hidden">
-                      <img 
-                        src="https://picsum.photos/seed/school/800/600" 
-                        alt="School" 
+                      <img
+                        src="https://picsum.photos/seed/school/800/600"
+                        alt="School"
                         className="w-full h-full object-cover"
                         referrerPolicy="no-referrer"
                       />
@@ -63,32 +63,25 @@ export default function LandingPage() {
                 </motion.div>
 
                 {/* Login Form Side */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   className="flex w-full flex-col lg:w-1/2 lg:max-w-md"
                 >
                   <div className="mb-8">
                     <h1 className="text-3xl font-black leading-tight tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
-                      Selamat Datang <br/> <span className="text-blue-600">Siswa Juara!</span>
+                      Selamat Datang <br /> <span className="text-blue-600">Siswa Juara!</span>
                     </h1>
                     <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
-                      Silakan pilih portal login Anda.
+                      Silakan login untuk mengakses portal simulasi ujian Anda.
                     </p>
                   </div>
                   <div className="flex flex-col gap-4">
-                    <button 
+                    <button
                       onClick={() => navigate('/student/login')}
                       className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 py-3.5 text-base font-bold text-white shadow-lg shadow-blue-600/30 transition-all hover:bg-blue-700 hover:shadow-blue-600/50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
                     >
                       <span>Login Siswa</span>
-                      <ArrowRight className="w-5 h-5" />
-                    </button>
-                    <button 
-                      onClick={() => navigate('/teacher/login')}
-                      className="flex w-full items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white py-3.5 text-base font-bold text-slate-700 shadow-sm transition-all hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700 dark:focus:ring-offset-slate-900"
-                    >
-                      <span>Login Guru / Admin</span>
                       <ArrowRight className="w-5 h-5" />
                     </button>
                   </div>
